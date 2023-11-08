@@ -1,0 +1,45 @@
+body{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid blue;
+    padding: 20px;
+    font-family: Verdana;
+}
+
+section > header{
+    background-image: url("header.jpg");
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 10px;
+    height: 75px;
+    font-size: 20px;
+    background-size: 100%;
+}
+
+section > nav{
+    background-color: #444444;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 12px;
+}
+section > nav > a{
+    text-decoration: none;
+    color: #56fd91;
+}
+
+article{
+    background-color: #eeeeee;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 4px 20px 4px 4px ;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article > header{
+    color: #444444;
+    text-decoration: underline;
+    font-size: 25px;
+}
