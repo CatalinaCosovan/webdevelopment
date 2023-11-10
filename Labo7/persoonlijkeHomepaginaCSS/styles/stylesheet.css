@@ -16,6 +16,7 @@ h2{
 
 h3{
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 li{
@@ -28,17 +29,56 @@ div{
     padding: 5px 20px 5px 15px;
 }
 
+.hobbies{
+    position: relative;
+    width: 46%;
+    margin-left: 51%;
+    height: 30em;
+}
+
+.persoonlijk{
+    position: absolute;
+    width: 36%;
+    height: 30em;
+}
+
 .links{
     position: absolute;
     width: 36%;
-    height: 35em;
+    height: 27em;
 }
 
 .rechts{
     position: relative;
     width: 46%;
     margin-left: 51%;
+    height: 27em;
+}
+
+.linksMovies{
+    position: absolute;
+    width: 36%;
     height: 35em;
+}
+
+.rechtsMovies{
+    position: relative;
+    width: 46%;
+    margin-left: 51%;
+    height: 35em;
+}
+
+.rechts img, .links img{
+    height: auto;
+    width: 70%;
+}
+
+.linksBTS > ul{
+    margin-top: 0;
+}
+
+.linksBTS img{
+    height: auto;
 }
 
 div.rechts > ul{
@@ -49,7 +89,12 @@ div.rechts > h2{
     display: inline-block;
 }
 
-img{
-    width: 50%;
+.harrypotter img, .divergent img{
+    width: 70%;
+    height: 500px;
 }
 
+.me > img{
+    width: unset;
+    height: unset;
+}
