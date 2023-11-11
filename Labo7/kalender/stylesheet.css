@@ -1,0 +1,36 @@
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+thead th{
+    background-color: rgb(170,170,200);
+}
+
+tbody th{
+    background-color: rgb(35,37,70);
+    color: rgb(200,190,240);
+    font: unset;
+}
+
+tbody th, td{
+    border: 2px dotted black;
+}
+
+td:first-child, td:last-child{
+    background-color:  rgb(255, 220, 220);
+}
+
+.vrijeDag{
+    background-color: rgb(250,120,120);
+}
+
+.evenement{
+    text-decoration: underline blue;
+    color: blue;
+}
+
+table .anderMaand{
+    background-color: #cccccc;
+    color: #aaaaac;
+}
