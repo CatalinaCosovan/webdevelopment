@@ -22,13 +22,13 @@ h2{
 }
 
 .links{
-    position: relative;
+    position: absolute;
     width: 31%;
     margin: unset;
 }
 
 .rechts{
-    position: absolute;
+    position: relative;
     width: 45%;
     margin-top: 0;
     margin-left: 51%;
