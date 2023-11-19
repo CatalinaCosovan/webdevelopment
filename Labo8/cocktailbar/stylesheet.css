@@ -1,0 +1,55 @@
+body{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Verdana Helvetica Arial;
+    font-size: 1.2em;
+}
+
+header{
+    text-align: center;
+}
+
+.content{
+    width: 70%;
+}
+
+body > article{
+    float: right;
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+}
+
+body > article a:hover{
+    background-color: saddlebrown;
+}
+
+body > article h2{
+    color: red;
+}
+
+section h1{
+    font-size: 150%;
+    color: #007e7e;
+    margin-top: 0;
+}
+
+section h2{
+    font-size: 130%;
+    color: #007e7e;
+}
+
+#guarantee{
+    margin: 30px;
+    padding: 20px;
+    color: #444444;
+    background-color: #a7cece;
+    border: 5px white dotted;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    font-size: 0.5em;
+}
