@@ -22,16 +22,14 @@ h2{
 }
 
 .links{
-    position: absolute;
-    width: 31%;
-    margin: unset;
-    overflow: auto;
+    width: 50%;
+    float: left;
+    margin-right: 30px;
+    box-sizing: border-box;
 }
 
 .rechts{
-    position: relative;
-    width: 45%;
-    margin-top: 0;
-    margin-left: 51%;
-    overflow: auto;
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
 }
