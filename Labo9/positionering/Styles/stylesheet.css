@@ -18,3 +18,9 @@ article:nth-child(even) img{
 article p, article h2{
     margin: 10px;
 }
+
+footer{
+    clear: both;
+    text-align: right;
+    margin-top: 50px;
+}
