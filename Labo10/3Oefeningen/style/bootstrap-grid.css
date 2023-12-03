@@ -32,6 +32,9 @@
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
+  .persoonlijk{
+    border-right: 10px solid white;
+  }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
