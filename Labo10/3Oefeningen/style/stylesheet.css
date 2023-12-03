@@ -87,3 +87,7 @@ table tbody td:first-child{
 table tbody tr:last-child td{
     border-bottom: none;
 }
+
+footer{
+    margin-top: 20px;
+}
