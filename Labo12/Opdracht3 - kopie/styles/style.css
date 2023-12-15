@@ -1,0 +1,107 @@
+/*gevraagde instellingen*/
+html {
+    background-color: #333;
+    font-family: helvetica, sans-serif;
+}
+
+* {
+    padding: 10px;
+}
+
+body{
+    background-color: #333;
+    font-size: 1em;
+    margin: 5px;
+}
+
+header, footer{
+    background-color: #ddaa00;
+}
+
+nav{
+    background-color: #ccc;
+    padding: 5px 2px;
+}
+
+main{
+    background-color: grey;
+}
+
+section{
+    margin: 5px;
+}
+
+section a{
+    border: 1px solid #333;
+}
+
+nav a{
+    margin: 0 5px;
+    border: 1px solid black;
+}
+
+h1{
+    margin: 0;
+}
+
+img{
+    padding: 0;
+}
+
+/*toegevoegde code*/
+h1{
+    text-align: center;
+    color: white;
+}
+
+nav{
+    display: flex;
+}
+
+nav a{
+    flex-basis: 100%;
+    text-align: center;
+    color: #ddaa00;
+    background-color: white;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+section a{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+@media screen and (min-width: 701px)
+{
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    section {
+        display: flex;
+    }
+
+    section a{
+        text-align: center;
+    }
+
+    section img{
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+
+
