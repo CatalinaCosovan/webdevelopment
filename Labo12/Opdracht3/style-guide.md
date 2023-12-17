@@ -19,7 +19,7 @@ The designs were created to the following widths:
 - color hyperlink:   #ddaa00;
 ### nav
 
-- background-color: #ccc
+- backgroundColor: #ccc
 
 ### main
 
