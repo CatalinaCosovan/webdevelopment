@@ -12,7 +12,11 @@ const setup = () => {
     voegNaamToe();
     console.log(array.join());
 
-    window.alert("Dit is een mededeling.")
+    window.alert("Dit is een mededeling.");
     window.confirm("Weet u dit zeker?");
+
+    console.log(window.confirm("Weet u dit zeker?"));
+    console.log(prompt("geef een naam in."));
 }
+
 window.addEventListener("load", setup); 
