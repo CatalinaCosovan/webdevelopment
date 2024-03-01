@@ -1,0 +1,37 @@
+body{
+    height: 100%;
+}
+table{
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+table td, table th{
+    padding: 0 5px;
+}
+
+table tr > td:last-child, .prijs{
+    text-align: right;
+}
+
+th{
+    font-weight: normal;
+    text-align: left;
+}
+
+table td, table th {
+    border: 1px solid black;
+}
+
+footer{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #313638;
+}
+
+footer a{
+    color: white;
+}

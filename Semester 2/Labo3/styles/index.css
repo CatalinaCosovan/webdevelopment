@@ -1,0 +1,21 @@
+.belangrijk{
+    font-weight: bold;
+}
+
+.opvallend{
+    color: red;
+}
+
+footer{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #313638;
+}
+
+footer a{
+    color: white;
+}

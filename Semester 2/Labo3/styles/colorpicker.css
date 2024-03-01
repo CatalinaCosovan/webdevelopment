@@ -1,0 +1,28 @@
+.colorPicker{
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.blok{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border: 1px solid black;
+    padding: 50px 50px;
+    width: 50px;
+}
+
+footer{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #313638;
+}
+
+footer a{
+    color: white;
+}
