@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulier Elementen</title>
+</head>
+<body>
+
+<form action="formulierElementen.html" method="post">
+    <label for="firstName">First name*: </label>
+    <input type="text" name="firstName" id="firstName" required="required" placeholder="Your first name" autofocus="autofocus"/> <br>
+    <label for="lastName">Last name*: </label>
+    <input type="text" name="lastName" id="lastName" required="required" placeholder="Your last name"/> <br>
+    <span>Which sport do you train?</span> <br>
+    <label for="running">Running</label>
+    <input type="checkbox" name="sport" id="running" /> <br>
+    <label for="swimming">Swimming</label>
+    <input type="checkbox" name="sport" id="swimming" /> <br>
+    <label for="rowing">Rowing</label>
+    <input type="checkbox" name="sport" id="rowing" /> <br>
+    <span>What is your gender?</span> <br>
+    <input type="radio" name="gender"  id="male" />
+    <label for="male">Male</label> <br>
+    <input type="radio" name="gender" id="female" />
+    <label for="female">Female</label> <br>
+    <label for="movie">Favorite movie: </label>
+    <input type="text" name="movie" id="movie" /> <br>
+    <label for="quote">Favorite quote: </label>
+    <input type="text" name="movie" id="quote" placeholder="Write your favorite quote"/> <br>
+    <label for="password">Password*: </label>
+    <input type="password" name="password" id="password" size="10" maxlength="10" required="required" /> <br>
+    <label for="foodList">Favorite food: </label>
+    <select name="food" id="foodList" size="1">
+        <option value="hamburger">Hamburger</option>
+        <option value="sushi">Sushi</option>
+        <option value="pizza">Pizza</option>
+        <option value="pasta">Pasta</option>
+        <option value="fries">Fries</option>
+    </select> <br>
+    <input type="file" multiple ="multiple" name="bestanden" id="bestanden" /> <br>
+    <label for="email">Email address: </label>
+    <input type="email" name="email" id="email" /> <br>
+    <label for="site">Favorite site: </label>
+    <input type="url" name="site" id="site" /> <br>
+    <label for="number">Favorite number between 1-10: </label>
+    <input type="number" name="number" id="number" min="1" max="10" /> <br>
+    <label for="numberGroter">Favorite number between 11-1000: </label>
+    <input type="range" name="number" id="numberGroter" min="11" max="1000" /> <br>
+    <label for="date">When were you born? </label>
+    <input type="date" name="date" id="date" /> <br>
+    <label for="postcode">Belgium zip-code reg number*: </label>
+    <input type="text" name="postcode" id="postcode" pattern="^[1-9][0-9]{3}$" maxlength="4" title="Geef een juiste postcode in" placeholder="9999" required="required"/> <br>
+    <label for="search">Search for something: </label>
+    <input type="search" name="search" id="search" /> <br>
+    <label for="color">What is your favorite color? </label>
+    <input type="color" name="color" id="color" /> <br>
+
+
+    <input type="submit">
+</form>
+
+<script src="scripts/formulierElementen.js"></script>
+</body>
+</html>

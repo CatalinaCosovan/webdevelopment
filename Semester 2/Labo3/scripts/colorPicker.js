@@ -1,17 +1,12 @@
 const setup = () => {
-    let blok = document.getElementById("blok");
     let sliders = document.getElementsByClassName("slider");
 
-    sliders[0].addEventListener("change", update);
-    sliders[0].addEventListener("input", update);
+    for(let i = 0; i < sliders.length; i++) {
+        sliders[i].addEventListener("change", update);
+        sliders[i].addEventListener("input", update);
+    }
 
-    sliders[1].addEventListener("change", update);
-    sliders[1].addEventListener("input", update);
-
-    sliders[2].addEventListener("change", update);
-    sliders[2].addEventListener("input", update);
-
-    blok.style.backgroundColor = "rgb("+sliders[0].value + "," + sliders[1].value + "," + sliders[2].value +")"
+    update();
 }
 const update = () => {
     let blok = document.getElementById("blok");
@@ -29,11 +24,7 @@ const update = () => {
     let blauw = document.getElementById("valueBlauw");
     blauw.textContent = valueBlauw;
 
-    let valueRoodGetal = parseInt(valueRood);
-    let valueGroenGetal = parseInt(valueGroen);
-    let valueBlauwGetal = parseInt(valueBlauw);
-
-    blok.style.backgroundColor = "rgb("+valueRoodGetal + "," + valueGroenGetal + "," + valueBlauwGetal+")";
+    blok.style.backgroundColor = `rgb(${valueRood}, ${valueGroen}, ${valueBlauw})`;
 }
 
 window.addEventListener("load", setup); 
