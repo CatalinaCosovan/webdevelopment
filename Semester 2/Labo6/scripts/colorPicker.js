@@ -64,9 +64,7 @@ const save = () => {
 
 
     let valueRood = getValueSlider(0);
-
     let valueGroen = getValueSlider(1);
-
     let valueBlauw = getValueSlider(2);
 
     nieuwdiv.setAttribute("class", "swatches");
@@ -84,7 +82,6 @@ const save = () => {
     nieuwdiv.appendChild(button);
 
     update();
-
 }
 
 const restoreSaved = (event) => {
