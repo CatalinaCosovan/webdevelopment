@@ -46,19 +46,28 @@ const update = () => {
             let div = lijstSwatches[i];
             div.addEventListener("click", restoreSaved);
         }
-
     }
 
 }
 
-const save = () => {
+const bepaalID = () => {
     let lijstDivs = document.querySelectorAll("#saved > div");
     let id = 0;
 
-    for(let i = 0; i < lijstDivs.length; i++) {
+    if(lijstDivs.length !== 0) {
         id = parseInt(lijstDivs[lijstDivs.length-1].getAttribute("data-ID")) + 1;
     }
 
+    for(let i = 0; i < lijstDivs.length; i++) {
+        if(lijstDivs.length !== 0 && parseInt(lijstDivs[i].getAttribute("data-ID")) === id) {
+            id = lijstDivs[lijstDivs.length-1] +1;
+        }
+    }
+
+    return id;
+}
+
+const save = () => {
     let nieuwdiv = document.createElement("div");
     let divSaved = document.getElementById("saved");
 
@@ -72,7 +81,7 @@ const save = () => {
     nieuwdiv.setAttribute("data-valueRood", `${valueRood}`);
     nieuwdiv.setAttribute("data-valueGroen", `${valueGroen}`);
     nieuwdiv.setAttribute("data-valueBlauw", `${valueBlauw}`);
-    nieuwdiv.setAttribute("data-ID", `${id}`);
+    nieuwdiv.setAttribute("data-ID", `${bepaalID()}`);
     divSaved.appendChild(nieuwdiv);
 
     let button =  document.createElement("button");
