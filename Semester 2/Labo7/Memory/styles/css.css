@@ -1,0 +1,33 @@
+/*body{
+    background-image: url("../images/background bord.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+#bord{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid black;
+    column-gap: 3px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 100%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (min-width: 900px) {
+    #bord{
+        width: 40%;
+    }
+}
