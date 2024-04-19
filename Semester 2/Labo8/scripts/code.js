@@ -50,8 +50,6 @@ const bewaarBewerktePersoon = () => {
             }
         }
     }
-
-    console.log(selectedIndex);
     // zorg ervoor dat de naam en voornaam ook aangepast en/of zichtbaar zijn in de lijst na updaten
 };
 
