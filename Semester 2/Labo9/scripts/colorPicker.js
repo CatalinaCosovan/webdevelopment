@@ -18,9 +18,9 @@ const setup = () => {
 
     if (settingsSlidersJSON === null) {
         settingsSliders = {
-            sliderRood: 0,
-            sliderGroen: 0,
-            sliderBlauw: 0
+            sliderRood: 255,
+            sliderGroen: 255,
+            sliderBlauw: 255
         };
     } else {
         settingsSliders = JSON.parse(settingsSlidersJSON);
@@ -35,7 +35,27 @@ const setup = () => {
     let settingsSwatches;
     let settingsSwatchesJSON = localStorage.getItem("lijstSavedSwatches");
 
-    
+    if (settingsSwatchesJSON !== null) {
+        settingsSwatches = JSON.parse(settingsSwatchesJSON);
+        let divSaved = document.getElementById("saved");
+
+        for(let i = 0; i < settingsSwatches.length; i++) {
+            let nieuwdiv = document.createElement("div");
+            nieuwdiv.setAttribute("class", "swatches");
+            nieuwdiv.style.backgroundColor = `rgb(${settingsSwatches[i].rood}, ${settingsSwatches[i].groen}, ${settingsSwatches[i].blauw})`;
+            nieuwdiv.setAttribute("data-valueRood", `${settingsSwatches[i].rood}`);
+            nieuwdiv.setAttribute("data-valueGroen", `${settingsSwatches[i].groen}`);
+            nieuwdiv.setAttribute("data-valueBlauw", `${settingsSwatches[i].blauw}`);
+            nieuwdiv.setAttribute("data-ID", `${settingsSwatches[i].id}`);
+            divSaved.appendChild(nieuwdiv);
+
+            let button =  document.createElement("button");
+            button.setAttribute("class", "buttonVerwijder");
+            let x = document.createTextNode("X");
+            button.appendChild(x);
+            nieuwdiv.appendChild(button);
+        }
+    }
 
 
     update();
@@ -87,6 +107,22 @@ const update = () => {
             div.addEventListener("click", restoreSaved);
         }
     }
+
+    arraySavedSwatches.splice(0, arraySavedSwatches.length);
+
+    for(let i = 0; i < lijstSwatches.length; i++) {
+        let object= {
+            id: parseInt(lijstSwatches[i].getAttribute("data-ID")),
+            rood: parseInt(lijstSwatches[i].getAttribute("data-valueRood")),
+            groen: parseInt(lijstSwatches[i].getAttribute("data-valueGroen")),
+            blauw: parseInt(lijstSwatches[i].getAttribute("data-valueBlauw")),
+        }
+
+        arraySavedSwatches.push(object);
+    }
+
+    localStorage.removeItem("lijstSavedSwatches");
+    localStorage.setItem("lijstSavedSwatches", JSON.stringify(arraySavedSwatches));
 
     let arrayJSON =  JSON.stringify(arraySavedSwatches);
     localStorage.setItem("lijstSavedSwatches", arrayJSON);
@@ -170,23 +206,6 @@ const verwijderSaved = (event) => {
             lijstSavedSwatches[i].remove();
         }
     }
-
-    let lijstSaved = document.getElementById("saved").children;
-    arraySavedSwatches.splice(0, arraySavedSwatches.length);
-
-    for(let i = 0; i < lijstSaved.length; i++) {
-        let object= {
-            id: parseInt(lijstSaved[i].getAttribute("data-ID")),
-            rood: parseInt(lijstSaved[i].getAttribute("data-valueRood")),
-            groen: parseInt(lijstSaved[i].getAttribute("data-valueGroen")),
-            blauw: parseInt(lijstSaved[i].getAttribute("data-valueBlauw")),
-        }
-
-        arraySavedSwatches.push(object);
-    }
-
-    localStorage.removeItem("lijstSavedSwatches");
-    localStorage.setItem("lijstSavedSwatches", JSON.stringify(arraySavedSwatches));
 
     event.stopPropagation();
     event.preventDefault();
