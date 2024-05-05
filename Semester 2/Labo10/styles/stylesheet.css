@@ -1,0 +1,69 @@
+body {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#zoekopdr, #goZoekopdr {
+    width: 100%;
+}
+
+#goZoekopdr {
+    background-color: green;
+    border-color: green;
+    border-radius: 5px;
+    color: white;
+}
+
+.bijschrift {
+    font-size: 11px;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+.container-fluid {
+    width: 90%;
+}
+
+.card {
+    width: 32%;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    color: white;
+}
+
+.card-body > a {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.youtube {
+    background-color: red;
+}
+
+.google {
+    background-color: #4285f4;
+}
+
+.instagram {
+    background-color: #c32aa3;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.pinterest {
+    background-color: #bd081c;
+}
+
+.youtube, .google, .instagram, .twitter, .pinterest {
+    color: white;
+}
